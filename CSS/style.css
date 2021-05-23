@@ -165,10 +165,10 @@ div.burger-menu-container span.burger-menu:hover::after {
 nav.hidden-nav {
   position: fixed;
   height: 0;
-  width: 99vw;
+  width: 100vw;
   height: 0;
   overflow: hidden;
-  bottom: 0;
+  top: 0;
   left: 0;
   display: grid;
   grid-template-columns: 1fr;
