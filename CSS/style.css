@@ -686,9 +686,11 @@ div.sender-details{
   padding: 0.25rem;
   display:block;
   margin-bottom: 3rem;
+  text-align: center;
 }
 div.sender-details input{
-  max-width: 95vw;
+  max-width: 90vw;
+  display: inline-block;
 }
 
 div.message textarea{
