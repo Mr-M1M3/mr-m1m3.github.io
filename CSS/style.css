@@ -101,6 +101,10 @@ div.social-links ul li a {
   color: #fbfbfb;
 }
 
+div.social-links ul li a:hover {
+  font-size: 1.75rem;
+}
+
 div.burger-menu-container {
   flex: 0;
   display: none;
@@ -203,11 +207,14 @@ li.hidden-nav-social-link-container {
   transition: 0.25s;
 }
 
-nav.hidden-nav > ul li a:hover,
-li.hidden-nav-social-link-container:hover {
-  font-size: 1.75rem;
+nav.hidden-nav > ul li:not(:last-child):hover {
+  letter-spacing: 0.5rem;
   color: #000000;
   font-weight: bold;
+}
+
+nav.hidden-nav > ul li:last-child a:hover {
+  font-size: 1.75rem;
 }
 
 /* Header */
@@ -295,12 +302,12 @@ a.header-btn {
 }
 
 main {
-  margin-top: 7rem;
+  margin-top: 5rem;
   padding: 2rem;
 }
 h1.section-title {
   text-align: center;
-  margin: 2rem auto;
+  margin: 7rem auto 2rem auto;
   font-family: "Ubuntu", sans-serif;
   font-size: 2.75rem;
 }
@@ -345,9 +352,9 @@ article.profile figure figcaption {
   font-family: "Lexend Deca", sans-serif;
 }
 
-section#skills{
+section#skills {
   min-height: 80vh;
-  padding: 1rem;
+  padding: 2rem;
   display: grid;
   justify-content: center;
   align-content: center;
@@ -357,7 +364,7 @@ section#skills{
   border-radius: 1rem 5rem 1rem 5rem;
 }
 
-article.skill{
+article.skill {
   padding: 1rem;
   display: grid;
   grid-template-columns: 1fr;
@@ -366,19 +373,19 @@ article.skill{
   align-items: center;
   border-radius: 1rem 5rem 1rem 5rem;
 }
-i.skill-logo{
+i.skill-logo {
   text-align: center;
   font-size: 3rem;
   /* color: #3626a7; */
   color: #3626a7;
 }
-h3.skill-title{
+h3.skill-title {
   font-size: 1.5rem;
   color: #3626a7;
   text-align: center;
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
 }
-div.skill-percentage{
+div.skill-percentage {
   height: 1.5rem;
   width: 100%;
   position: relative;
@@ -386,7 +393,7 @@ div.skill-percentage{
   border-radius: 0.25rem;
 }
 
-div.skill-percentage p{
+div.skill-percentage p {
   display: block;
   padding: 0.125rem;
   text-align: center;
@@ -394,29 +401,107 @@ div.skill-percentage p{
   top: 0;
   left: 0;
   height: 100%;
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   background-color: #3626a7;
   border-radius: 0.25rem;
+  color: #fbfbfb;
 }
 
-div.skill-percentage p.html{
+div.skill-percentage p.html {
   width: 77%;
 }
 
-div.skill-percentage p.css{
+div.skill-percentage p.css {
   width: 60%;
 }
 
-div.skill-percentage p.js{
+div.skill-percentage p.js {
   width: 55%;
 }
 
-div.skill-percentage p.linux{
+div.skill-percentage p.linux {
   width: 47%;
 }
 
-div.skill-percentage p.terminal{
+div.skill-percentage p.terminal {
   width: 41%;
+}
+
+/* Projects */
+section#projects {
+  min-height: 80vh;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+h1.project-title {
+  margin: 1rem auto;
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Big Shoulders Display", cursive;
+  letter-spacing: 0.125rem;
+  word-spacing: 0.25rem;
+}
+
+article.project {
+  padding: 1rem;
+  position: relative;
+}
+
+article.project::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: 2;
+  background-color: #333333;
+  background-image: url("");
+  backdrop-filter: blur(100px);
+  display: none;
+  animation: preview-animate 0.25s ease-in-out;
+}
+
+a.project-btn {
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  padding: 1rem 2rem;
+  border: 2px solid #fdfdfd;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fdfdfd;
+  border-radius: 3rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  display: none;
+  animation: preview-animate 0.25s ease-in;
+}
+
+article.project:hover::after,
+article.project:hover a.project-btn {
+  display: block;
+}
+@keyframes preview-animate {
+  from {
+    /* transform: translateX(-200vh); */
+    opacity: 0;
+  }
+  to {
+    /* transform: translateX(0); */
+    opacity: 0.5;
+  }
+}
+
+button.project-btn span {
+  display: inline-block;
+  margin-right: 0.5rem;
 }
 
 @media screen and (max-width: 864px) {
