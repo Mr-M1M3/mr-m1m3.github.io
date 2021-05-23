@@ -27,9 +27,9 @@ div.logo h1 {
   white-space: nowrap;
 }
 
-div.logo h1 a{
-    color: #333333;
-    text-decoration: none;
+div.logo h1 a {
+  color: #333333;
+  text-decoration: none;
 }
 
 div.nav-links {
@@ -101,7 +101,7 @@ div.burger-menu-container {
   display: none;
 }
 
-div.burger-menu-container span::before {
+div.burger-menu-container span.burger-menu::before {
   content: "";
   height: 3px;
   width: 100%;
@@ -124,7 +124,7 @@ div.burger-menu-container span {
   cursor: pointer;
 }
 
-div.burger-menu-container span::after {
+div.burger-menu-container span.burger-menu::after {
   content: "";
   height: 3px;
   width: 100%;
@@ -134,25 +134,76 @@ div.burger-menu-container span::after {
   transition: 0.25s ease-in;
 }
 
-div.burger-menu-container span:hover::before {
+div.burger-menu-container span.burger-menu:hover::before {
   box-shadow: none;
   transform: translateY(0) rotate(135deg);
   transition: 0.25s ease-in;
 }
 
-div.burger-menu-container span:hover::after {
+div.burger-menu-container span.burger-menu:hover::after {
   transform: translateY(0) rotate(-135deg);
   transition: 0.25s ease-in;
 }
 
-@media screen and (max-width: 864px) {
+/* Hidden NAV */
 
-nav.visible-nav{
+nav.hidden-nav {
+  position: fixed;
+  height: 0;
+  min-width: 97vw;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 300px;
+  justify-content: center;
+  align-content: center;
+  background-color: #fdfdfd;
+  overflow: hidden;
+  z-index: 10;
+  transition: 0.5s ease-in;
+  box-shadow: 3px 1px 10px #333333;
+}
+div.burger-menu-container:hover nav.hidden-nav {
+  height: 50vh;
+}
+
+nav.hidden-nav > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+nav.hidden-nav > ul li {
+  padding: 0.75rem 1rem;
+  font-family: "Big Shoulders Display", cursive;
+  text-align: center;
+  border-bottom: 3px solid #333333;
+}
+
+nav.hidden-nav > ul li a {
+  color: #333333;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 1.5rem;
+}
+li.hidden-nav-social-link-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 864px) {
+  nav.visible-nav {
     justify-content: space-between;
-}
-div.logo{
+  }
+  div.logo {
     flex: 0;
-}
+  }
 
   div.nav-links {
     display: none;
