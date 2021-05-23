@@ -149,8 +149,9 @@ div.burger-menu-container span.burger-menu:hover::after {
 
 nav.hidden-nav {
   position: fixed;
-  height: 0;
-  min-width: 97vw;
+  min-height: 50vh;
+  width: 0;
+  overflow: hidden;
   top: 0.5rem;
   left: 50%;
   transform: translateX(-50%);
@@ -160,13 +161,12 @@ nav.hidden-nav {
   justify-content: center;
   align-content: center;
   background-color: #fdfdfd;
-  overflow: hidden;
   z-index: 10;
   transition: 0.5s ease-in;
   box-shadow: 3px 3px 10px #333333, -1px -1px 10px #333333;
 }
 div.burger-menu-container:hover nav.hidden-nav {
-  height: 50vh;
+  width: 97vw;
 }
 
 nav.hidden-nav > ul {
