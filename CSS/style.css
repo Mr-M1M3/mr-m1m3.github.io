@@ -307,7 +307,7 @@ main {
 }
 h1.section-title {
   text-align: center;
-  margin: 7rem auto 2rem auto;
+  margin: 8rem auto 2rem auto;
   font-family: "Ubuntu", sans-serif;
   font-size: 2.75rem;
 }
@@ -447,6 +447,11 @@ h1.project-title {
 article.project {
   padding: 1rem;
   position: relative;
+  border-radius: 0.5rem;
+}
+
+article.project img{
+  border-radius: 0.5rem;
 }
 
 article.project::after {
@@ -459,6 +464,7 @@ article.project::after {
   opacity: 0.5;
   z-index: 2;
   background-color: #333333;
+  border-radius: 0.5rem;
   background-image: url("");
   backdrop-filter: blur(100px);
   display: none;
@@ -473,7 +479,7 @@ a.project-btn {
   transform: translate(-50%, -50%);
   z-index: 5;
   padding: 1rem 2rem;
-  border: 2px solid #fdfdfd;
+  border: 2px solid #3626a7;
   background-color: rgba(0, 0, 0, 0.9);
   color: #fdfdfd;
   border-radius: 3rem;
@@ -490,11 +496,9 @@ article.project:hover a.project-btn {
 }
 @keyframes preview-animate {
   from {
-    /* transform: translateX(-200vh); */
     opacity: 0;
   }
   to {
-    /* transform: translateX(0); */
     opacity: 0.5;
   }
 }
@@ -502,6 +506,80 @@ article.project:hover a.project-btn {
 button.project-btn span {
   display: inline-block;
   margin-right: 0.5rem;
+}
+section#contact{
+  padding: 3rem;
+  background-color:hsla(233, 47%, 7%, 1);
+  border-radius: 5rem 1rem 5rem 1rem;
+  min-height: 80vh;
+}
+
+form#contact-form{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(332.5px, 1fr));
+  gap: 1.5rem;
+  min-height: 80vh;
+  padding: 1rem;
+}
+div.sender-details{
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+div.sender-details div{
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div.sender-details input{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  color: #fbfbfb;
+  padding: 0.5rem;
+  outline: none;
+  font-size: 1.0rem;
+  border-bottom: 2px solid #3626a7;
+  font-family: 'Ubuntu', sans-serif; 
+}
+div.message{
+  min-width: 100%;
+  padding-bottom: 1rem;
+}
+
+div.message textarea {
+  min-height: 90%;
+  width: 100%;
+  border: 0.5rem solid hsla(233, 47%, 7%, 1);
+  padding: 1rem;
+  background-color: transparent;
+  color: #fbfbfb;
+  outline: none;
+  resize: none;
+  border: 2px solid #3626a7;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+a.send-btn{
+  margin: 1rem;
+  max-height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+  color: #fbfbfb;
+  text-decoration: none;
+  text-align: center;
+  background-color: #3626a7;
+  font-family: 'Ubuntu', sans-serif; 
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  border-radius: 0.25rem;
 }
 
 @media screen and (max-width: 864px) {
@@ -521,6 +599,11 @@ button.project-btn span {
   div.burger-menu-container {
     display: block;
   }
+  div.sender-details div{
+    height: 100%;
+  }
+
+
 }
 @media screen and (max-width: 732px) {
   main {
