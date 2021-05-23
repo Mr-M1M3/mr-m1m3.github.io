@@ -522,23 +522,16 @@ section#contact {
 
 form#contact-form {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(332.5px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   min-height: 80vh;
   padding: 1rem;
 }
 div.sender-details {
   padding: 1rem;
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-div.sender-details div {
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  gap: 1rem; */
 }
 
 div.sender-details input {
@@ -550,11 +543,13 @@ div.sender-details input {
   padding: 0.5rem;
   outline: none;
   font-size: 1rem;
+  display: block;
+  margin-top: 1rem;
   border-bottom: 2px solid #3626a7;
   font-family: "Ubuntu", sans-serif;
 }
 div.message {
-  min-width: 100%;
+  max-width: 100%;
   padding-bottom: 1rem;
 }
 
@@ -574,7 +569,7 @@ div.message textarea {
 a.send-btn {
   margin: 1rem;
   max-height: 10%;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   padding: 1.25rem;
@@ -660,6 +655,7 @@ p.footer-copyright-txt {
   div.sender-details div {
     height: 100%;
   }
+
 }
 @media screen and (max-width: 732px) {
   main {
@@ -674,4 +670,28 @@ p.footer-copyright-txt {
   article.profile figure figcaption {
     display: none;
   }
+}
+@media screen and (max-width: 864px) {
+  section#contact{
+    padding: 3rem 0;
+    width: 95vw;
+  }
+  form#contact-form{
+    display: block;
+    padding: 1rem 0.25rem;
+    max-width: 100%;
+  }
+
+div.sender-details{
+  padding: 0.25rem;
+  display:block;
+  margin-bottom: 3rem;
+}
+div.sender-details input{
+  max-width: 95vw;
+}
+
+div.message textarea{
+  min-height: 200px;
+}
 }
