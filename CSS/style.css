@@ -25,6 +25,21 @@ nav.visible-nav {
   align-items: center;
   justify-content: space-around;
   background-color: #3626a7;
+  animation: nav-animate 1s;
+  position: relative;
+}
+@keyframes nav-animate {
+  0%{
+    /* position: absolute; */
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+  99%{
+    transform: translateX(0);
+  }
+  100%{
+    opacity: 1;
+  }
 }
 div.logo {
   flex: 1;
@@ -229,6 +244,17 @@ header {
   min-height: 550px;
   border-radius: 0 0 0 10rem;
   position: relative;
+  animation: header-animate 1.4s;
+}
+@keyframes header-animate {
+  0%{
+    opacity: 0;
+    transform: translateY(-100vw);
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 header div.header-bg {
   position: absolute;
