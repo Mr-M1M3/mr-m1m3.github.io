@@ -8,7 +8,13 @@
 }
 html {
   font-size: 16px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+html::-webkit-scrollbar {
+  display: none;
+}
+
 img {
   max-width: 100%;
   max-height: 100%;
@@ -580,6 +586,57 @@ a.send-btn{
   font-weight: 700;
   letter-spacing: 0.125rem;
   border-radius: 0.25rem;
+}
+
+/* Footer */
+footer{
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  align-content: center;
+  gap: 5rem;
+  background-color: hsla(233, 47%, 7%, 1);
+  border-radius: 3rem 3rem 0 0;
+  margin-top: 5rem;
+}
+h2.footer-title{
+  color: #fdfdfd;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+footer div ul{
+  list-style-type: none;
+}
+
+footer div ul li{
+  color: #fbfbfb;
+  margin-top: 1.5rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: normal;
+}
+
+footer div ul li a{
+  color: #fbfbfb;
+  font-family: monospace;
+  display: inline-block;
+  margin-left: 1rem;
+}
+i.envelope{
+  font-size: 1.5rem;
+}
+
+footer div ul:first-child li {
+  text-align: center;
+}
+
+p.footer-copyright-txt{
+  background-color: #000000;
+  color: #fbfbfb;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  padding: 1rem 0 0.5rem 0;
 }
 
 @media screen and (max-width: 864px) {
