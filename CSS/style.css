@@ -163,7 +163,7 @@ nav.hidden-nav {
   overflow: hidden;
   z-index: 10;
   transition: 0.5s ease-in;
-  box-shadow: 3px 1px 10px #333333;
+  box-shadow: 3px 3px 10px #333333, -1px -1px 10px #333333;
 }
 div.burger-menu-container:hover nav.hidden-nav {
   height: 50vh;
