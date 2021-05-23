@@ -242,8 +242,10 @@ header div.header-bg {
 div.header-bg img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   border-radius: 0 0 0 10rem;
 }
 
@@ -349,7 +351,8 @@ article.profile figure img {
   max-height: 100%;
   max-width: 100%;
   border-radius: 0.5rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 article.profile figure figcaption {
@@ -472,9 +475,11 @@ article.project::after {
   background-color: #333333;
   border-radius: 0.5rem;
   background-image: url("");
-  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
   display: none;
-  animation: preview-animate 0.25s ease-in-out;
+  -webkit-animation: preview-animate 0.25s ease-in-out;
+          animation: preview-animate 0.25s ease-in-out;
 }
 
 a.project-btn {
@@ -493,12 +498,21 @@ a.project-btn {
   font-weight: 700;
   font-size: 1rem;
   display: none;
-  animation: preview-animate 0.25s ease-in;
+  -webkit-animation: preview-animate 0.25s ease-in;
+          animation: preview-animate 0.25s ease-in;
 }
 
 article.project:hover::after,
 article.project:hover a.project-btn {
   display: block;
+}
+@-webkit-keyframes preview-animate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
 }
 @keyframes preview-animate {
   from {
