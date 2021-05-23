@@ -168,8 +168,7 @@ nav.hidden-nav {
   width: 0;
   overflow: hidden;
   top: 0.5rem;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 300px;
