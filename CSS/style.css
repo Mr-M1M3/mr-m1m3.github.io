@@ -19,11 +19,17 @@ div.logo {
   flex: 1;
 }
 
-div.logo h1{
-    font-family: 'Big Shoulders Stencil Text', cursive;
-    word-spacing: 0.5rem;
-    letter-spacing: 0.25rem;
-    font-size: 2.25rem;
+div.logo h1 {
+  font-family: "Big Shoulders Stencil Text", cursive;
+  word-spacing: 0.25rem;
+  letter-spacing: 0.125rem;
+  font-size: 2.25rem;
+  white-space: nowrap;
+}
+
+div.logo h1 a{
+    color: #333333;
+    text-decoration: none;
 }
 
 div.nav-links {
@@ -75,17 +81,86 @@ div.social-links {
   flex: 1;
 }
 div.social-links ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
 }
 
-div.social-links ul li:first-child{
-    margin-right: 1rem;
+div.social-links ul li:first-child {
+  margin-right: 1rem;
 }
 
-div.social-links ul li a{
-    font-size: 1.5rem;
-    color: #333333;
+div.social-links ul li a {
+  font-size: 1.5rem;
+  color: #333333;
+}
+
+div.burger-menu-container {
+  flex: 0;
+  display: none;
+}
+
+div.burger-menu-container span::before {
+  content: "";
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  background-color: #333333;
+  box-shadow: 0 10px 0 #333333;
+  transform: translateY(-10px);
+  transition: 0.25s ease-in;
+}
+
+div.burger-menu-container span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  background-color: transparent;
+  transition: 0.25s ease-in;
+  cursor: pointer;
+}
+
+div.burger-menu-container span::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  background-color: #333333;
+  transform: translateY(10px);
+  transition: 0.25s ease-in;
+}
+
+div.burger-menu-container span:hover::before {
+  box-shadow: none;
+  transform: translateY(0) rotate(135deg);
+  transition: 0.25s ease-in;
+}
+
+div.burger-menu-container span:hover::after {
+  transform: translateY(0) rotate(-135deg);
+  transition: 0.25s ease-in;
+}
+
+@media screen and (max-width: 864px) {
+
+nav.visible-nav{
+    justify-content: space-between;
+}
+div.logo{
+    flex: 0;
+}
+
+  div.nav-links {
+    display: none;
+  }
+  div.social-links {
+    display: none;
+  }
+  div.burger-menu-container {
+    display: block;
+  }
 }
