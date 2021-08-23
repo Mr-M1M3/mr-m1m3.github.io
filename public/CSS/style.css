@@ -8,11 +8,6 @@
 }
 html {
   font-size: 16px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-html::-webkit-scrollbar {
-  display: none;
 }
 
 img {
@@ -31,12 +26,7 @@ nav.visible-nav {
 }
 @-webkit-keyframes nav-animate {
   0%{
-    /* position: absolute; */
     opacity: 0;
-    transform: translateX(100vw);
-  }
-  99%{
-    transform: translateX(0);
   }
   100%{
     opacity: 1;
@@ -44,12 +34,7 @@ nav.visible-nav {
 }
 @keyframes nav-animate {
   0%{
-    /* position: absolute; */
     opacity: 0;
-    transform: translateX(100vw);
-  }
-  99%{
-    transform: translateX(0);
   }
   100%{
     opacity: 1;
@@ -258,13 +243,13 @@ header {
   min-height: 550px;
   border-radius: 0 0 0 10rem;
   position: relative;
-  -webkit-animation: header-animate 1.4s;
-          animation: header-animate 1.4s;
+  -webkit-animation: header-animate 0.5s;
+          animation: header-animate 0.5s;
 }
 @-webkit-keyframes header-animate {
   0%{
     opacity: 0;
-    transform: translateY(-100vw);
+    transform: translateY(100vh);
   }
   100%{
     transform: translateY(0);
@@ -274,7 +259,7 @@ header {
 @keyframes header-animate {
   0%{
     opacity: 0;
-    transform: translateY(-100vw);
+    transform: translateY(100vh);
   }
   100%{
     transform: translateY(0);
@@ -349,7 +334,6 @@ div.header-btn-container {
 }
 a.header-btn {
   padding: 1rem 2rem;
-  /* color: #323232; */
   color: #fdfdfd;
   text-decoration: none;
   font-family: "Ubuntu", sans-serif;
@@ -383,7 +367,7 @@ article.about-me {
   padding: 0.5rem;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   grid-area: aboutMe;
 }
 
@@ -436,7 +420,6 @@ article.skill {
 i.skill-logo {
   text-align: center;
   font-size: 3rem;
-  /* color: #3626a7; */
   color: #3626a7;
 }
 h3.skill-title {
@@ -595,9 +578,6 @@ form#contact-form {
 }
 div.sender-details {
   padding: 1rem;
-  /* display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem; */
 }
 
 div.sender-details input {

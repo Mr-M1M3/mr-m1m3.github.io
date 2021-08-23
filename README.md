@@ -1,3 +1,3 @@
 # Portfolio
 
-Project for Bakebit Web Design Contest
+My Portfolio ^_^
